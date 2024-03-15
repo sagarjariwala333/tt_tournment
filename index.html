@@ -93,6 +93,20 @@
             font-weight: bold; /* Bold font weight */
             font-size: 1.3rem; /* Larger font size */
         }
+        
+          /* Media query for mobile screens */
+        @media only screen and (min-width: 768px) {
+            .leaderboard-link {
+                display: none; /* Hide the link on screens larger than 768px */
+            }
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 767px) {
+            .iframe-container {
+                display: none; /* Hide the iframe on mobile */
+            }
+        }
     </style>
 </head>
 
@@ -105,7 +119,10 @@
             <p class="quote">"Table tennis is like an atom. To the ignorant, it is merely microscopic. To the dedicated, it is majestic."</p>
             <p class="quote">- Desmond Douglas</p>
         </div>
-        <div class="iframe-container">
+        <!-- Anchor tag for mobile screens -->
+        <a href="https://challonge.com/ouhwzbeh" class="text-center block md:hidden leaderboard-link">Click Here for Leaderboard</a>
+        <!-- Iframe for laptop and desktop screens -->
+        <div class="iframe-container hidden md:block">
             <iframe src="https://challonge.com/ouhwzbeh/module" frameborder="0"
                 scrolling="auto" allowtransparency="true"></iframe>
         </div>
